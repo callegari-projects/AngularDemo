@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="pokedex">
+<head>
+    <meta charset="UTF-8">
+    <title>AngularJS Demo</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+    <script src="js/controller.js"></script>
+</head>
+<body>
+    <div ng-controller="PokemonController as pkmCtrl">
+        <h1>{{pkmCtrl.pokemon.name}} #{{pkmCtrl.pokemon.id}}</h1>
+        <h2>Seed Pokémon</h2>
+        <ul>
+            <li><strong>Type:</strong>{{pkmCtrl.pokemon.type.join(', ')}}</li>
+            <li><strong>Height:</strong>{{pkmCtrl.pokemon.height}}</li>
+            <li><strong>Weight:</strong>{{pkmCtrl.pokemon.weight}}</li>
+            <li><strong>Abilities:</strong>{{pkmCtrl.pokemon.abilities.join(', ')}}</li>
+        </ul>
+    </div>
+</body>
+</html>
